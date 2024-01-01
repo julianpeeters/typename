@@ -1,5 +1,5 @@
 # typename
-Get names for common types, using typeclasses instead of reflection.
+Get names for common types using typeclasses instead of reflection.
 
 ### Add the dependency:
  - libarary for Scala @SCALA@ (JS, JVM, and Native platforms)
@@ -13,5 +13,5 @@ Get names for common types, using typeclasses instead of reflection.
 ```scala mdoc
 import typename.{NameOf, given}
 
-val name: String = summon[NameOf[Some[Int]]].name
+val str: String = summon[NameOf[Some[Int]]].name
 ```
