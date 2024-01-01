@@ -15,3 +15,26 @@ import typename.{NameOf, given}
 
 val str: String = summon[NameOf[Some[Int]]].name
 ```
+
+### Supported types:
+
+<details><summary>click to expand</summary>
+
+##### Primitive:
+ - `Boolean`
+ - `Byte`
+ - `Char`
+ - `Int`
+ - `Long`
+ - `Nothing`
+ - `String`
+ - `Unit`
+
+##### Complex:
+ - `Array`
+ - `Either`
+ - `List`
+ - `Option`
+ - `Tuple`
+
+</details>
