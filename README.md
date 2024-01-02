@@ -5,7 +5,7 @@ Get names for common types using typeclasses instead of reflection.
  - libarary for Scala 3 (JS, JVM, and Native platforms)
  
 ```scala
-"com.julianpeeters" %% "typename" % "0.1.0"
+"com.julianpeeters" %% "typename" % "0.2.0"
 ```
 
 ### Example:
@@ -34,8 +34,9 @@ val str: String = summon[NameOf[Some[Int]]].name
 ##### Complex:
  - `Array`
  - `Either`
+ - `Function` (1-9)
  - `List`
  - `Option`
- - `Tuple`
+ - `Tuple` (2-9)
 
 </details>
