@@ -160,3 +160,31 @@ object types:
         new NameOf[Tuple2[_1, _2]]:
           def name: String = s"Tuple2[${_1.name}, ${_2.name}]"
           def parent: Option[String] = None
+      given [_1, _2, _3] (using _1: NameOf[_1], _2: NameOf[_2], _3: NameOf[_3]): NameOf[Tuple3[_1, _2, _3]] =
+        new NameOf[Tuple3[_1, _2, _3]]:
+          def name: String = s"Tuple3[${_1.name}, ${_2.name}, ${_3.name}]"
+          def parent: Option[String] = None
+      given [_1, _2, _3, _4] (using _1: NameOf[_1], _2: NameOf[_2], _3: NameOf[_3], _4: NameOf[_4]): NameOf[Tuple4[_1, _2, _3, _4]] =
+        new NameOf[Tuple4[_1, _2, _3, _4]]:
+          def name: String = s"Tuple4[${_1.name}, ${_2.name}, ${_3.name}, ${_4.name}]"
+          def parent: Option[String] = None
+      given [_1, _2, _3, _4, _5] (using _1: NameOf[_1], _2: NameOf[_2], _3: NameOf[_3], _4: NameOf[_4], _5: NameOf[_5]): NameOf[Tuple5[_1, _2, _3, _4, _5]] =
+        new NameOf[Tuple5[_1, _2, _3, _4, _5]]:
+          def name: String = s"Tuple5[${_1.name}, ${_2.name}, ${_3.name}, ${_4.name}, ${_5.name}]"
+          def parent: Option[String] = None
+      given [_1, _2, _3, _4, _5, _6] (using _1: NameOf[_1], _2: NameOf[_2], _3: NameOf[_3], _4: NameOf[_4], _5: NameOf[_5], _6: NameOf[_6]): NameOf[Tuple6[_1, _2, _3, _4, _5, _6]] =
+        new NameOf[Tuple6[_1, _2, _3, _4, _5, _6]]:
+          def name: String = s"Tuple6[${_1.name}, ${_2.name}, ${_3.name}, ${_4.name}, ${_5.name}, ${_6.name}]"
+          def parent: Option[String] = None
+      given [_1, _2, _3, _4, _5, _6, _7] (using _1: NameOf[_1], _2: NameOf[_2], _3: NameOf[_3], _4: NameOf[_4], _5: NameOf[_5], _6: NameOf[_6], _7: NameOf[_7]): NameOf[Tuple7[_1, _2, _3, _4, _5, _6, _7]] =
+        new NameOf[Tuple7[_1, _2, _3, _4, _5, _6, _7]]:
+          def name: String = s"Tuple7[${_1.name}, ${_2.name}, ${_3.name}, ${_4.name}, ${_5.name}, ${_6.name}, ${_7.name}]"
+          def parent: Option[String] = None
+      given [_1, _2, _3, _4, _5, _6, _7, _8] (using _1: NameOf[_1], _2: NameOf[_2], _3: NameOf[_3], _4: NameOf[_4], _5: NameOf[_5], _6: NameOf[_6], _7: NameOf[_7], _8: NameOf[_8]): NameOf[Tuple8[_1, _2, _3, _4, _5, _6, _7, _8]] =
+        new NameOf[Tuple8[_1, _2, _3, _4, _5, _6, _7, _8]]:
+          def name: String = s"Tuple8[${_1.name}, ${_2.name}, ${_3.name}, ${_4.name}, ${_5.name}, ${_6.name}, ${_7.name}, ${_8.name}]"
+          def parent: Option[String] = None
+      given [_1, _2, _3, _4, _5, _6, _7, _8, _9] (using _1: NameOf[_1], _2: NameOf[_2], _3: NameOf[_3], _4: NameOf[_4], _5: NameOf[_5], _6: NameOf[_6], _7: NameOf[_7], _8: NameOf[_8], _9: NameOf[_9]): NameOf[Tuple9[_1, _2, _3, _4, _5, _6, _7, _8, _9]] =
+        new NameOf[Tuple9[_1, _2, _3, _4, _5, _6, _7, _8, _9]]:
+          def name: String = s"Tuple8[${_1.name}, ${_2.name}, ${_3.name}, ${_4.name}, ${_5.name}, ${_6.name}, ${_7.name}, ${_8.name}, ${_9.name}]"
+          def parent: Option[String] = None

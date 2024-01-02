@@ -34,8 +34,9 @@ val str: String = summon[NameOf[Some[Int]]].name
 ##### Complex:
  - `Array`
  - `Either`
+ - `Function` (1-9)
  - `List`
  - `Option`
- - `Tuple`
+ - `Tuple` (2)
 
 </details>
