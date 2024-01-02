@@ -142,6 +142,10 @@ object types:
           def parent: Option[String] = None
 
     object option:
+      given [T] (using T: NameOf[T]): NameOf[Option[T]] =
+        new NameOf[Option[T]]:
+          def name: String = s"Option[${T.name}]"
+          def parent: Option[String] = None
       given [T] (using T: NameOf[T]): NameOf[Some[T]] =
         new NameOf[Some[T]]:
           def name: String = s"Some[${T.name}]"
