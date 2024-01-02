@@ -2,6 +2,7 @@ package typename
 
 export types.complex.array.given
 export types.complex.either.given
+export types.complex.function.given
 export types.complex.list.given
 export types.complex.option.given
 export types.complex.tuple.given
@@ -79,7 +80,6 @@ object types:
         new NameOf[Either[L, R]]:
           def name: String = s"Either[${L.name}, ${R.name}]"
           def parent: Option[String] = None
- 
       given [L, R] (using L: NameOf[L], R: NameOf[R]): NameOf[Left[L, R]] =
         new NameOf[Left[L, R]]:
           def name: String = s"Left[${L.name}, ${R.name}]"
@@ -88,6 +88,44 @@ object types:
         new NameOf[Right[L, R]]:
           def name: String = s"Right[${L.name}, ${R.name}]"
           def parent: Option[String] = Some(s"Either[${L.name}, ${R.name}]")
+
+    object function:
+      given [T, R] (using T: NameOf[T], R: NameOf[R]): NameOf[Function1[T, R]] =
+        new NameOf[Function1[T, R]]:
+          def name: String = s"${T.name} => ${R.name}"
+          def parent: Option[String] = None
+      given [T1, T2, R] (using T1: NameOf[T1], T2: NameOf[T2], R: NameOf[R]): NameOf[Function2[T1, T2, R]] =
+        new NameOf[Function2[T1, T2, R]]:
+          def name: String = s"(${T1.name}, ${T2.name}) => ${R.name}"
+          def parent: Option[String] = None
+      given [T1, T2, T3, R] (using T1: NameOf[T1], T2: NameOf[T2], T3: NameOf[T3],  R: NameOf[R]): NameOf[Function3[T1, T2, T3, R]] =
+        new NameOf[Function3[T1, T2, T3, R]]:
+          def name: String = s"(${T1.name}, ${T2.name}, ${T3.name}) => ${R.name}"
+          def parent: Option[String] = None  
+      given [T1, T2, T3, T4, R] (using T1: NameOf[T1], T2: NameOf[T2], T3: NameOf[T3], T4: NameOf[T4],  R: NameOf[R]): NameOf[Function4[T1, T2, T3, T4, R]] =
+        new NameOf[Function4[T1, T2, T3, T4, R]]:
+          def name: String = s"(${T1.name}, ${T2.name}, ${T3.name}, ${T4.name}) => ${R.name}"
+          def parent: Option[String] = None
+      given [T1, T2, T3, T4, T5, R] (using T1: NameOf[T1], T2: NameOf[T2], T3: NameOf[T3], T4: NameOf[T4], T5: NameOf[T5], R: NameOf[R]): NameOf[Function5[T1, T2, T3, T4, T5, R]] =
+        new NameOf[Function5[T1, T2, T3, T4, T5, R]]:
+          def name: String = s"(${T1.name}, ${T2.name}, ${T3.name}, ${T4.name}, ${T5.name}) => ${R.name}"
+          def parent: Option[String] = None   
+      given [T1, T2, T3, T4, T5, T6, R] (using T1: NameOf[T1], T2: NameOf[T2], T3: NameOf[T3], T4: NameOf[T4], T5: NameOf[T5], T6: NameOf[T6], R: NameOf[R]): NameOf[Function6[T1, T2, T3, T4, T5, T6, R]] =
+        new NameOf[Function6[T1, T2, T3, T4, T5, T6, R]]:
+          def name: String = s"(${T1.name}, ${T2.name}, ${T3.name}, ${T4.name}, ${T5.name}, ${T6.name}) => ${R.name}"
+          def parent: Option[String] = None
+      given [T1, T2, T3, T4, T5, T6, T7, R] (using T1: NameOf[T1], T2: NameOf[T2], T3: NameOf[T3], T4: NameOf[T4], T5: NameOf[T5], T6: NameOf[T6], T7: NameOf[T7], R: NameOf[R]): NameOf[Function7[T1, T2, T3, T4, T5, T6, T7, R]] =
+        new NameOf[Function7[T1, T2, T3, T4, T5, T6, T7, R]]:
+          def name: String = s"(${T1.name}, ${T2.name}, ${T3.name}, ${T4.name}, ${T5.name}, ${T6.name}, ${T7.name}) => ${R.name}"
+          def parent: Option[String] = None
+      given [T1, T2, T3, T4, T5, T6, T7, T8, R] (using T1: NameOf[T1], T2: NameOf[T2], T3: NameOf[T3], T4: NameOf[T4], T5: NameOf[T5], T6: NameOf[T6], T7: NameOf[T7], T8: NameOf[T8], R: NameOf[R]): NameOf[Function8[T1, T2, T3, T4, T5, T6, T7, T8, R]] =
+        new NameOf[Function8[T1, T2, T3, T4, T5, T6, T7, T8, R]]:
+          def name: String = s"(${T1.name}, ${T2.name}, ${T3.name}, ${T4.name}, ${T5.name}, ${T6.name}, ${T7.name}, ${T8.name}) => ${R.name}"
+          def parent: Option[String] = None
+      given [T1, T2, T3, T4, T5, T6, T7, T8, T9, R] (using T1: NameOf[T1], T2: NameOf[T2], T3: NameOf[T3], T4: NameOf[T4], T5: NameOf[T5], T6: NameOf[T6], T7: NameOf[T7], T8: NameOf[T8], T9: NameOf[T9], R: NameOf[R]): NameOf[Function9[T1, T2, T3, T4, T5, T6, T7, T8, T9, R]] =
+        new NameOf[Function9[T1, T2, T3, T4, T5, T6, T7, T8, T9, R]]:
+          def name: String = s"(${T1.name}, ${T2.name}, ${T3.name}, ${T4.name}, ${T5.name}, ${T6.name}, ${T7.name}, ${T8.name}, ${T9.name}) => ${R.name}"
+          def parent: Option[String] = None    
 
     object list:
       given [T] (using T: NameOf[T]): NameOf[List[T]] =
